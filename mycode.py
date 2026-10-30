@@ -10,6 +10,10 @@ def division(a, b):
 
 def factorielle(n):
     """Calcule la factorielle de n (récursif)."""
+    if not isinstance(n, int):
+        raise ValueError("n doit être un nombre entier")
+    if n < 0:
+        raise ValueError("n doit être positif ou nul")
     if n == 0:
         return 1
     return n * factorielle(n - 1)
